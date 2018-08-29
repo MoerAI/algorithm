@@ -1,4 +1,4 @@
-package dyjava.ch1;
+package dyjava.ch2;
 
 public class ToYard {
 

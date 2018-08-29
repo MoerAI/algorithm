@@ -1,4 +1,4 @@
-package dyjav.ch2;
+package dyjava.ch3;
 
 import java.util.Scanner;
 
