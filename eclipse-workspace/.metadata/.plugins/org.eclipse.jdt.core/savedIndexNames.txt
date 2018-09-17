@@ -13,7 +13,6 @@ INDEX VERSION 1.130+C:\Users\frien\Documents\algorithm\eclipse-workspace\.metada
 2485878017.index
 1988513050.index
 4275838308.index
-3138638879.index
 14682029.index
 1622776731.index
 3854475047.index
