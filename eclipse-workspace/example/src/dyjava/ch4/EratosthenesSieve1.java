@@ -10,5 +10,20 @@ public class EratosthenesSieve1 {
 		for(i=0;i<number.length;i++) {
 			number[i] = i+1;
 		}
+		i=2;
+		while(true) {
+			if(number[i-2]%i==0) {
+				prime[j]=number[i-1];
+				if((j+1)%20==0) {
+					System.out.println();
+				}
+				System.out.print(prime[j]+", ");
+				j++;
+			}
+			i++;
+			if(i==1002) {
+				break;
+			}
+		}
 	}
 }

@@ -9,7 +9,7 @@ public class ArrayListEx {
 		//문자열만 삽입가능한 ArrayList 컬렉션 생성
 		ArrayList<String> a = new ArrayList<String>();
 		
-		//키보드롭터 4개의 이름을 입력받아 ArrayList에 삽입
+		//키보드로부터 4개의 이름을 입력받아 ArrayList에 삽입
 		Scanner scanner = new Scanner(System.in);//Scanner 객체 생성
 		for(int i=0;i<4;i++) {
 			System.out.println("이름을 입력하세요>");
