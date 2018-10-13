@@ -1,4 +1,4 @@
-package method;
+package method1;
 
 //인스턴트메서드와 클래스 메서드의 비교
 public class MethodEx6 {

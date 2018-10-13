@@ -1,4 +1,4 @@
-package method;
+package method1;
 
 //Call by Name : 이름만 있는 함수
 //Method에 커서 두고 f3을 누르면 해당 메소드로 넘어간다.

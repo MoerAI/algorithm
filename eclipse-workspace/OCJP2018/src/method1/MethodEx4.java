@@ -1,4 +1,4 @@
-package method;
+package method1;
 
 //ÁßÃ¸ ¸Þ¼Òµå
 public class MethodEx4 {

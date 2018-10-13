@@ -1,4 +1,4 @@
-package method;
+package method1;
 //Call by name
 public class MethodEx2 {
 

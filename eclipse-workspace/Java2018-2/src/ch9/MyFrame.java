@@ -23,6 +23,7 @@ public class MyFrame extends JFrame {
 		//cpane.setLayout(new FlowLayout());
 		
 		JPanel panel1 = new JPanel();
+		cpane.add(panel1, BorderLayout.WEST);
 		panel1.setLayout(new GridLayout(4, 1));
 		panel1.setBackground(Color.YELLOW);
 		panel1.add(new JLabel("아이디"));
@@ -32,8 +33,7 @@ public class MyFrame extends JFrame {
 		
 		
 		JPanel panel2 = new JPanel();
-		cpane.add(panel2 ,BorderLayout.WEST);
-		panel2 = new JPanel();
+		cpane.add(panel2 ,BorderLayout.EAST);
 		panel2.setLayout(new GridLayout(4, 1));
 		panel2.setBackground(Color.GREEN);
 		panel2.add(new JLabel("채크하세요."));
