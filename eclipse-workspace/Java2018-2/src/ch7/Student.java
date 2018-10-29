@@ -19,4 +19,7 @@ public class Student {
 		this.id=id;
 		this.tel = tel;
 	}
+	public Student(String name, String sub, String add) {
+		// TODO Auto-generated constructor stub
+	}
 }

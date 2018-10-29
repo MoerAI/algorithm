@@ -4,11 +4,14 @@ import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
+import ch7.Student;
 
 public class TextFieldEx extends JFrame {
 	public TextFieldEx() {
@@ -26,6 +29,7 @@ public class TextFieldEx extends JFrame {
 		c.add(new JLabel("주소"));
 		JTextField tfadd = new JTextField(20);
 		c.add(tfadd);
+		ArrayList<Student> alist = new ArrayList<>();
 		JButton btn = new JButton("확인");
 		
 		btn.addActionListener(new ActionListener() {
@@ -36,6 +40,8 @@ public class TextFieldEx extends JFrame {
 				String name = tfname.getText();
 				String sub = tfsub.getText();
 				String add = tfadd.getText();
+				Student stu = new Student(name, sub, add);
+				alist.add(stu);
 				System.out.println(name+sub+add);
 			}
 		});
