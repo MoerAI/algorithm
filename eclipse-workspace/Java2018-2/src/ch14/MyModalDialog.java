@@ -14,6 +14,7 @@ public class MyModalDialog extends JDialog{
 	JButton okButton = new JButton("OK");
 	
 	public MyModalDialog(JFrame frame, String title) {
+		super(frame, title, true);
 		setLayout(new FlowLayout());
 		add(tf);
 		add(okButton);
@@ -24,7 +25,7 @@ public class MyModalDialog extends JDialog{
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				setVisible(true);
+				setVisible(false);
 			}
 		});
 	}
