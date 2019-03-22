@@ -1,30 +1,56 @@
 #include <stdio.h>
 
-int array[3];
+int number, data[1000000];
+
+void quickSort(int* data, int start, int end)
+{
+    if(start >= end)//원소가 1개인 경우 그대로 두기
+    {
+        return;
+    }
+
+    int key = start;//키는 첫 번째 원소
+    int i = start + 1, j = end, temp;
+
+    while(i <= j)
+    {
+        while(data[i] <= data[key])//키보다 큰 값을 만날 때까지
+        {
+            i++;
+        }
+        while(data[j] >= data[key] && j > start)
+        {
+            j--;
+        }
+        if(i > j)
+        {
+            temp = data[j];
+            data[j] = data[key];
+            data[key] = temp;
+        }
+        else
+        {
+            temp = data[i];
+            data[i] = data[j];
+            data[j] = temp;
+        }
+    }
+
+    quickSort(data, start, j - 1);
+    quickSort(data, j + 1, end);
+}
 
 int main()
 {
-    int i, j, temp;
-    for(i = 0; i < 3; i++)
+    scanf("%d", &number);
+    for(int i = 0; i < number; i++)
     {
-        scanf("%d", &array[i]);
+        scanf("%d",&data[i]);
     }
-    for(i = 0; i < 3; i++)
+    quickSort(data, 0, number - 1);
+    for(int i = 0; i < number; i++)
     {
-        for(j = 0; j < 2 - i; j++)
-        {
-            if(array[j] > array[j + 1])
-            {
-                temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
-            }
-        }
+        printf("%d\n", data[i]);
     }
-    for(i = 0; i < 3; i++)
-    {
-        printf("%d \n", array[i]);
-    }
-
     return 0;
 }
