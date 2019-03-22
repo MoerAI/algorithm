@@ -1,31 +1,29 @@
 #include <stdio.h>
-#include <stdlib.h>
+
+int array[3];
 
 int main()
 {
-    int index, mini, temp;
-    int array[10] = {3, 5, 6, 7, 8, 2, 10, 1, 4, 9};
-
-    for(int i = 0; i < 10; i++)
+    int i, j, temp;
+    for(i = 0; i < 3; i++)
     {
-        mini = 99999;
-
-        for(int j = i; j < 10; j++)
+        scanf("%d", &array[i]);
+    }
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 2 - i; j++)
         {
-            if(mini>array[j])
+            if(array[j] > array[j + 1])
             {
-                mini = array[j];
-                index = j;
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
             }
         }
-        temp = array[i];
-        array[i] = array[index];
-        array[index] = temp;
     }
-
-    for(int i = 0; i < 10; i++)
+    for(i = 0; i < 3; i++)
     {
-        printf("%d ",array[i]);
+        printf("%d \n", array[i]);
     }
 
     return 0;
