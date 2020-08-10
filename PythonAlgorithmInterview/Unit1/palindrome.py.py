@@ -1,4 +1,6 @@
-#1번풀이
+#leetcode 125 : Valid Palndrome
+#주어진 문자열이 팰린드롬인지 확인하라. 대소문자를 구분하지 않으며, 영문자와 숫자만을 대상으로 한다.
+#1. 리스트로 변환
 def isPalindrome(self, s: str) -> bool:
     #대소문자 전처리
     strs = []
@@ -11,7 +13,7 @@ def isPalindrome(self, s: str) -> bool:
         if strs.pop(0) != strs.pop():
             return False
 
-#2번풀이
+#2 데크자료형으로 최적화
 def isPalindrome(self, s: str) -> bool:
     #자료형 데크로 선언
     strs: Deque = collections.deque()
@@ -26,7 +28,7 @@ def isPalindrome(self, s: str) -> bool:
         
     return True
 
-#3번풀이
+#3 슬라이싱 사용
 def isPalindrome(self, s: str) -> bool:
     s = s.lower()
     #정규식으로 불필요한 문자 필터링
