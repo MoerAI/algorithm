@@ -7,3 +7,10 @@
 #            ["nat", "tan"],
 #            ["bat"]
 #          ]
+
+def groupAnagrams(self, strs: List[srt]) -> List[List[str]]:
+    anagrams = collections.defaultdict(list)
+    
+    for word in strs:
+        anagrams[''.join(sorted(word))].append(word)
+    return anagrams.values()
