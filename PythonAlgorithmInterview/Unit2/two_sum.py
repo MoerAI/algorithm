@@ -7,7 +7,7 @@
 def twoSum(self, nums: List[int], target: int) -> List[int]:
     for i in range(len(nums)):
         for j in range(len(nums)):
-            if nums[i] + num[j] == target:
+            if nums[i] + nums[j] == target:
                 return [i, j]
             
 #2. in을 이용한 탐색
