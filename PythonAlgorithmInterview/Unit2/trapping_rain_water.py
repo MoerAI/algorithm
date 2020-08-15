@@ -2,7 +2,7 @@
 #높이를 입력받아 비 온 후 얼마나 많은 물이 쌓일 수 있는지 계산하라
 #이미지가 있는 문제임
 
-#1. 무작정 구하기
+#1. 브루트 포스로 계산하기
 def trap(self, height: List[int]) -> int:
     if not height:
         return 0
@@ -32,3 +32,5 @@ def trap(self, height: List[int]) -> int:
             volume += right_max - height[right]
             right -= 1
     return volume
+
+#3. 스택 쌓기
