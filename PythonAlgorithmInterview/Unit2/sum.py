@@ -25,3 +25,5 @@ def threeSum(self, nums: List[int]) -> List[List[int]]
                     results.append((nums[i], nums[j], nums[k]))
                 
     return results
+
+#투 포인터로 합 계산
