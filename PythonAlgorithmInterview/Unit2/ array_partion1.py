@@ -17,3 +17,14 @@ def arrayPairSum(self, nums: List[int]) -> int:
             pair = []
 
     return sum
+
+#짝수 번째 값 계산
+def arrayPairSum(self, num: List[int]) -> int:
+    sum = 0
+    nums.sort()
+
+    for i, n in enumerate(nums):
+        if i % 2 == 0:
+            sum += n
+
+    return sum
