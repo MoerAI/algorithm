@@ -28,3 +28,8 @@ def arrayPairSum(self, num: List[int]) -> int:
             sum += n
 
     return sum
+
+#파이썬다운 방식
+
+def arrayPairSum(self, nums: List[int]) -> int:
+    return sum(sorted(nums)[::2])
