@@ -29,4 +29,4 @@ def removeDuplicateLetters(self, s: str) -> str:
         stack.append(char)
         seen.add(char)
 
-    return ''.join(stack)C
+    return ''.join(stack)
