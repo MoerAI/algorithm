@@ -11,7 +11,7 @@
 # circularQueue.deQueue(); // true 리턴
 # circularQueue.enQueue(50); // true 리턴
 # circularQueue.enQueue(60); // true 리턴
-# circularQueue.Rear(); // 60 리턴
+# circularQueue.Rear(); // 60
 # circularQueue.Front(); // 30 리턴
 
 class MyCircularQueue:
