@@ -38,3 +38,12 @@ class Solution:
             count += freqs[char]
             
         return count
+    
+    # Counter로 계산 생략
+    def numJewelsInStones(self, J: str, S: str) -> int:
+        freqs = collections.Counter(S) # 돌(S) 빈도수 계산
+        count = 0
+        for char in J:
+            count += freqs[char]
+        
+        return count
