@@ -47,3 +47,7 @@ class Solution:
             count += freqs[char]
         
         return count
+    
+    # 파이썬 다운 방식
+    def numJewelsInStones(self, J: str, S: str) -> int:
+        return sum(s in J for s in S)
