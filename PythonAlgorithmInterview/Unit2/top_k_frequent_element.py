@@ -4,6 +4,10 @@
 # output : [1,2]
 
 #Counter를 이용한 음수 순 추출
+import collections
+import heapq
+from typing import List
+
 def topKFrequent(self, nums: List[int], k: int) -> List[int]:
     freqs = collections.Counter(nums)
     freqs_heap = []
