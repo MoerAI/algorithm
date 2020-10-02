@@ -1,6 +1,7 @@
 ## Git Ignore File##
 .project
-.metadata
+eclipse-workspace/.metadata
+eclipse-workspace/.recommenders
 .classpath
 .settings/
 .loadpath
