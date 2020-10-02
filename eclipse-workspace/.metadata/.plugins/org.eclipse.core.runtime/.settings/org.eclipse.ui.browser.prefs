@@ -1,4 +1,0 @@
-browser-choice=1
-browsers=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<web-browsers current\="2">\r\n<system/>\r\n<external location\="C\:\\Program Files\\Internet Explorer\\iexplore.exe" name\="Internet Explorer"/>\r\n<external location\="C\:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" name\="Chrome"/>\r\n</web-browsers>
-eclipse.preferences.version=1
-internalWebBrowserHistory=file\:///C\:/Users/frien/Documents/algorithm/eclipse-workspace/Java2018-2/src/ch14/images/save.jpg|*|file\:/C\:/Users/frien/Documents/algorithm/eclipse-workspace/Java2018-2/src/ch14/images/save.jpg|*|file\:///C\:/Users/frien/Documents/algorithm/eclipse-workspace/Java2018-2/src/ch14/images/open.jpg|*|file\:/C\:/Users/frien/Documents/algorithm/eclipse-workspace/Java2018-2/src/ch14/images/open.jpg|*|http\://localhost\:8080/jsptest/home.jsp|*|http\://localhost\:8080/home.jsp/|*|http\://localhost\:8080/WebContent/home.jsp/|*|http\://localhost\:8080/jsptest/|*|
