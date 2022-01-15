@@ -1,16 +1,25 @@
-# 큰 수의 법칙
-# 배열의 크기 N, 더하기 횟수 M, 한개 원소 여러번 더하기 최댓값 K를 공백으로 구분하여 입력받기
-n, m, k = map(int, input().split())
-# N개의 수를 공백으로 구분하여 입력받기
-data = list(map(int, input().split()))
-#데이터 정렬
-data.sort()
-first = data[n - 1]
-second = data[n - 2]
-answer = first * k * (m//k) + second * (m % k)
-print(answer)
+import pytest
 
-# 시도하다가 만든 가장 큰 값과 두번째로 큰 값 찾기
+# 배열의 크기 N
+# 주어진 수를 M번 더하여 가장 큰 수
+# 연속해서 K번 초과 불가
+# 배열 array
+
+@pytest.mark.parameterize("n,m,k,data,expected", [(5, 8, 3, [2, 4, 5, 4, 6], 46)])
+def test_solve(n, m, k, data, expected):
+    result = solve_m(n, m, k, data)
+    assert result == expected
+
+
+# 내 풀이
+def solve_m(n, m, k, data):
+    data.sort()
+    answer = 0
+    first = data[n - 1]
+    second = data[n - 2]
+    answer = first * k * (m//k) + second * (m % k)
+    return answer
+# 가장 큰 값과 두번째로 큰 값 찾기
 # first = second = -float('inf') #최소값으로 설정
 # for e in data:
 #     if e > first:
@@ -19,29 +28,41 @@ print(answer)
 #     elif second < e < first:
 #         second = e
 
+
 # 교재 풀이 1
-answer = 0
-count = m
-while True:
-    for i in range(k): # 가장 큰 수를 K번 더하기
+def solve1(n, m, k, data):
+    data.sort()
+    first = data[n - 1]
+    second = data[n - 2]
+    answer = 0
+    count = m
+    while True:
+        for i in range(k):
+            if count == 0:
+                break
+            answer += first
+            count -= 1
+
         if count == 0:
             break
-        answer += first
-        count -= 1 # 더할 때마다 1씩 빼기
+        answer += second
+        count -= 1
+    return answer
 
-    if count == 0: # m이 0이라면 반복문 탈출
-        break
-    answer += second # 두 번째로 큰 수를 한 번 더하기
-    count -= 1 # 더할 때마다 1씩 빼기
-
-print(answer) # 최종 답안 출력
 
 # 교재 풀이 2
-count = int(m / (k + 1)) * k
-count += m % (k + 1)
+def solve2(n, m, k, data):
+    data.sort()
+    first = data[n - 1]
+    second = data[n - 2]
+    answer = 0
+    count = m
 
-answer = 0
-answer += (count) * first # 가장 큰 수 더하기
-answer += (m - count) * second # 두 번째로 큰 수 더하기
+    count = int(m / (k + 1)) * k
+    count += m % (k + 1)
 
-print(answer)
+    answer = 0
+    answer += (count) * first
+    answer += (m - count) * second
+
+    return answer
