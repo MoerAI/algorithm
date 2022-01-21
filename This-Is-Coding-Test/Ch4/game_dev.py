@@ -30,10 +30,8 @@ import pytest
        [1, 1, 1, 1]],
       5)
      ])
-
-
 def test_solve(n, m, info, map, expected):
-    result = solve_m(n, m, info, map)
+    result = solve1(n, m, info, map)
     assert result == expected
 
 
