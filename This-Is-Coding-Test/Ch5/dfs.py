@@ -1,12 +1,12 @@
 def dfs(graph, v, visited):
     visited[v] = True
     print(v, end=' ')
-
+    # 현재 노드를 방문 처리
     for i in graph[v]:
         if not visited[i]:
             dfs(graph, i, visited)
 
-
+# 각 노드가 연결된 정보를 리스트 자료형으로 표현(2차원 리스트)
 if __name__ == '__main__':
     graph = [
         [],
