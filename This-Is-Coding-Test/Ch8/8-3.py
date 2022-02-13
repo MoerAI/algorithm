@@ -9,4 +9,4 @@ def pibo(x):
     d[x] = pibo(x - 1) + pibo(x - 2)
     return d[x]
 
-pibo(6)
+pibo(10)

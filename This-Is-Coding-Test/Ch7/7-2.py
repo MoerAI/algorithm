@@ -2,7 +2,7 @@
 def binary_search(array, target, start, end):
     if start > end:
         return None
-    mid = (start + end) / 2
+    mid = (start + end) // 2
     # 찾은 경우 중간점 인덱스 반환
     if array[mid] == target:
         return mid

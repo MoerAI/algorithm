@@ -8,7 +8,7 @@ def fibo(x):
     if d[x] != 0:
         return d[x]
     # 아직 계산하지 않은 문제라면 점화식에 따라서 피보나치 결과 반환
-    d[x] - fibo(x - 1) + fibo(x - 2)
+    d[x] = fibo(x - 1) + fibo(x - 2)
     return d[x]
 
 print(fibo(99))
