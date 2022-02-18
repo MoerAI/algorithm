@@ -1,12 +1,23 @@
-n = int(input())
+import pytest
 
-array = list(map(int, input().split()))
+# 3 <= n <= 100
+# 0 <= k <= 1000
+@pytest.mark.parametrize(
+    'n, store, expected',
+    [(4,
+      [1, 3, 1, 5],
+      8
+    )])
+def test_solve(n, store, expected):
+    result = solve(n, store)
+    assert result == expected
 
-d = [0] * 100
 
-d[0] = array[0]
-d[1] = max(array[0], array[1])
-for i in range(2, n):
-    d[i] = max(d[i - 1], d[i - 2] + array[i])
+def solve(n, store):
+    d = [0] * 100
+    d[0] = store[0]
+    d[1] = max(store[0], store[1])
+    for i in range(2, n):
+        d[i] = max(d[i - 1], d[i - 2] + store[i])
 
-print(d[n - 1])
+    return d[n]
