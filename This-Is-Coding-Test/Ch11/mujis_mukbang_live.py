@@ -1,4 +1,15 @@
+import pytest
 import heapq
+
+
+@pytest.mark.parametrize(
+    'food_times, k, expected',
+    [([3, 1, 2], 5, 1)]
+)
+def test(food_times, k, expected):
+    result = solution(food_times, k)
+    assert result == expected
+
 
 def solution(food_times, k):
     if sum(food_times) <= k:
@@ -10,6 +21,7 @@ def solution(food_times, k):
 
     sum_value = 0
     previous = 0
+    
     length = len(food_times)
 
     while sum_value + ((q[0][0] - previous) * length) <= k:
