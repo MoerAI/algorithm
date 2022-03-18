@@ -1,3 +1,22 @@
+import pytest
+
+
+@pytest.mark.parametrize(
+    'key, lock, expected',
+    [([[0, 0, 0],
+       [1, 0, 0],
+       [0, 1, 1]],
+      [[1, 1, 1],
+       [1, 1, 0],
+       [1, 0, 1]],
+      True
+      )]
+)
+def test(key, lock, expected):
+    result = solution(key, lock)
+    assert result == expected
+
+
 # 2차원 리스트 90도 회전하기
 def rotate_a_matrix_by_90_degree(a):
     n = len(a) # 행 길이 계산

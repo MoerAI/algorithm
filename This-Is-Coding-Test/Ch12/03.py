@@ -1,3 +1,18 @@
+import pytest
+
+@pytest.mark.parametrize(
+    's, expected',
+    [('aabbaccc', 7),
+     ('ababcdcdababcdcd', 9),
+     ('abcabcdede', 8),
+     ('abcabcabcabcdededededede', 14),
+     ('xababcdcdababcdcd', 17)]
+)
+def test(s, expected):
+    result = solution(s)
+    assert result == expected
+
+
 def solution(s):
     answer = len(s)
     # 1개 단위(step)부터 압축 단위를 늘려가며 확인

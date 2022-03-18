@@ -1,17 +1,23 @@
-n = input()
-length = len(n) # 점수 값의 총 자릿수
-summary = 0
+import pytest
 
-# 왼쪽 부분의 자릿수의 합 더하기
-for i in range(length // 2):
-    summary += int(n[i])
 
-# 오른쪽 부분의 자릿수의 합 빼기
-for i in range(length // 2, length):
-    summary -= int(n[i])
+@pytest.mark.parametrize(
+    'n, expected',
+    [(123402, "LUCKY"), (7755, "READY")]
+)
+def test(n, expected):
+    result = solution(n)
+    assert result == expected
 
-# 왼쪽 부분과 오른쪽 부분의 자릿수 합이 동일한지 검사
-if summary == 0:
-    print("LUCKY")
-else:
-    print("READY")
+def solution(n):
+    mid = len(n) / 2
+    score = 0
+    for i, v in enumerate(n):
+        if i < mid:
+            score += v
+        else:
+            score -= v
+    if score == 0:
+        print("LUCKY")
+    else:
+        print("READY")
