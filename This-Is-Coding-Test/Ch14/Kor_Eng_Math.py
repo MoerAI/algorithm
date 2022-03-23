@@ -35,9 +35,7 @@ def test(n, array, expected):
     result = solution(n, array)
     assert result == expected
 
+
 def solution(n, array):
-    array.sort(key=lambda x : (-x[1], x[2], -x[3]))
-    answer = []
-    for name, kor, eng, math in array:
-        answer.append(name)
-    return answer
+    array.sort(key=lambda x : (-x[1], x[2], -x[3], x[0]))
+    return [name for name in array]
