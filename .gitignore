@@ -5,7 +5,8 @@ eclipse-workspace/.recommenders
 .classpath
 .settings/
 .loadpath
- 
+.DS_Store
+
 bin/**
 tmp/**
 tmp/**/*
