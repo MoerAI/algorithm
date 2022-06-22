@@ -20,6 +20,49 @@ N은 100보다 작거나 같은 자연수이다.
 첫째 줄에 그룹 단어의 개수를 출력한다.
 """
 
+# Example
+"""
+|Input1|
+3
+happy
+new
+year
+|Output1|
+3
+
+|Input2|
+4
+aba
+abab
+abcabc
+a
+|Output2|
+1
+
+|Input3|
+5
+ab
+aa
+aca
+ba
+bb
+|Output3|
+4
+
+|Input4|
+2
+yzyzy
+zyzyz
+|Output4|
+0
+
+|Input5|
+1
+z
+|Output5|
+1
+"""
+
 # Solution
 n = int(input())
 count = 0
