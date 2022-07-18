@@ -57,7 +57,6 @@ if len(a) == len(b):
         if a[i] != b[i]:
             answer += 1
     answer_list.append(answer)
-            
 else:
     n = len(b) - len(a)
     for i in range(n+1):
