@@ -54,6 +54,6 @@ for p in pikachu:
 s = s.replace(".","")
 
 if len(s) == 0:
-    print("Yes")
+    print("YES")
 else:
-    print("No")
+    print("NO")
