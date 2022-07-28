@@ -49,11 +49,9 @@ s = input()
 pikachu = ['pi', 'ka', 'chu']
 
 for p in pikachu:
-    s = s.replace(p, '.')
+    s = s.replace(p, ' ')
 
-s = s.replace(".","")
-
-if len(s) == 0:
+if len(s.strip()) == 0:
     print("YES")
 else:
     print("NO")
