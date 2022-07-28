@@ -35,10 +35,12 @@
 BAPC
 AABA
 ABCABCBBAAACC
+AAAB
 |Output1|
 OK
 FAKE
 OK
+FAKE
 """
 
 # Solution
@@ -58,8 +60,9 @@ for i in range(n):
             flag = 0
         if c in dic:
             dic[c] += 1
-            if dic[c] % 3 == 0:
+            if dic[c] == 3:
                 flag = 1
+                dic[c] = 3
                 temp = c
         else:
             dic[c] = 1
