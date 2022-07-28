@@ -16,72 +16,47 @@
 
 # Input
 """
-첫째 줄에 종이의 줄의 개수 N이 주어진다. (1 ≤ N ≤ 100)
-다음 N개의 줄에는 각 줄의 내용이 주어진다. 각 줄은 최대 100글자이고, 항상 알파벳 소문자와 숫자로만 이루어져 있다.
+첫째 줄에는 단어의 개수가 주어지고 둘째 줄부터는 한 줄에 하나씩 단어가 주어진다.
+모든 단어는 영문 알파벳 대문자로 이루어져 있다. 단어의 개수는 100개 이하이며, 각 단어의 길이는 10 이하이다.
 """
 
 # Output
 """
-종이에서 찾은 숫자의 개수를 M이라고 하면, 출력은 M줄로 이루어져야 한다.
-각 줄에는 종이에서 찾은 숫자를 하나씩 출력해야 한다. 이때, 비내림차순으로 출력해야 한다.
-비내림차순은 내림차순의 반대인 경우인데, 다음 수가 앞의 수보다 크거나 같은 경우를 말한다.
+입력으로 주어진 첫 번째 단어와 비슷한 단어가 몇 개인지 첫째 줄에 출력한다.
 """
 
 # Example
 """
-|Input1|
+|Input|
+5
+DOG
+GOD
+GOOD
+DDOOGGC
+DOLL
+|Output|
 2
-lo3za4
-01
-|Output1|
-1
-3
-4
-
-|Input2|
-4
-43silos0
-zita002
-le2sim
-231233
-|Output2|
-0
-2
-2
-43
-231233
-
-|Input3|
-4
-01bond
-02james007
-03bond
-04austinpowers000
-|Output3|
-0
-1
-2
-3
-4
-7
 """
 
 # Solution
-import re
-
 n = int(input())
-lan_list = []
-numbers = []
+s = list(input())
+lan_list =[]
+cnt = 0
 
-for i in range(n):
-    lan_list.append(input())
+for i in range(n-1):
+    lan_list.append(str(input()))
 
-for s in lan_list:
-    number = re.findall(r'\d+', s)
-    numbers += number
-
-numbers = list(map(int, numbers))
-numbers = list(numbers)
-numbers.sort()
-for n in numbers:
-    print(n)
+for l in lan_list:
+    for c in s:
+        l = l.replace(c, '')
+    if len(l) == 0:
+        cnt += 1
+    elif len(l) == 1:
+        set_s = set(s)
+        tem_s = list(s)
+        if tem_s == s:
+            pass
+        else:
+            cnt +=1
+print(cnt)
