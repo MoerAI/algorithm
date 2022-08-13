@@ -16,17 +16,3 @@ for i in range(c):
 
 result = list(filter(lambda x: len(x) > 1, result))
 print(sorted(result)[0])
-
-    # for i in range(c):
-    #     if s[i] != '#':
-    #         word += s[i]
-    #     elif (s[i] == '#') & (len(word) >= 2):
-    #         dic.add(word)
-    #         word = ''
-    #         if len(s[i:]) == 1:
-    #             break
-    # if s not in '#':
-    #     dic.add(word)
-    #     word = ''
-    
-print(dic)
